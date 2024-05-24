@@ -3,33 +3,39 @@ package com.construction.projetconstruction.model;
 import java.sql.Date;
 
 public class Tache {
-    private int id;
+    private int id_tache;
     private String status;
-    private Date dateDebut;
-    private Date dateFin;
+    private Date datedebut;
+    private Date datefin;
     private String description;
+    private int id_projet;
 
-    public Tache(String status, Date dateDebut, Date dateFin, String description) {
+    public Tache(String status, Date datedebut, Date datefin, String description, int id_projet) {
         this.status = status;
-        this.dateDebut = dateDebut;
-        this.dateFin = dateFin;
+        this.datedebut = datedebut;
+        this.datefin = datefin;
         this.description = description;
+        this.id_projet = id_projet;
     }
 
-    public Tache(int id, String status, Date dateDebut, Date dateFin, String description) {
-        this.id = id;
+    public Tache(int id_tache, String status, Date datedebut, Date datefin, String description, int id_projet) {
+        this.id_tache = id_tache;
         this.status = status;
-        this.dateDebut = dateDebut;
-        this.dateFin = dateFin;
+        this.datedebut = datedebut;
+        this.datefin = datefin;
         this.description = description;
+        this.id_projet = id_projet;
+    }
+
+    public Tache() {
     }
 
     public int getId() {
-        return id;
+        return id_tache;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int id_tache) {
+        this.id_tache = id_tache;
     }
 
     public String getStatus() {
@@ -40,20 +46,20 @@ public class Tache {
         this.status = status;
     }
 
-    public Date getDateDebut() {
-        return dateDebut;
+    public Date getDatedebut() {
+        return datedebut;
     }
 
-    public void setDateDebut(Date dateDebut) {
-        this.dateDebut = dateDebut;
+    public void setDatedebut(Date datedebut) {
+        this.datedebut = datedebut;
     }
 
-    public Date getDateFin() {
-        return dateFin;
+    public Date getDatefin() {
+        return datefin;
     }
 
-    public void setDateFin(Date dateFin) {
-        this.dateFin = dateFin;
+    public void setDatefin(Date datefin) {
+        this.datefin = datefin;
     }
 
     public String getDescription() {
@@ -64,4 +70,11 @@ public class Tache {
         this.description = description;
     }
 
+    public int getId_projet() {
+        return id_projet;
+    }
+
+    public void setId_projet(int id_projet) {
+        this.id_projet = id_projet;
+    }
 }
